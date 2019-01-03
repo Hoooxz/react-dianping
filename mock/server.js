@@ -102,6 +102,16 @@ router.get('/api/orderlist/:username', function *(next) {
     this.body = orderList
 })
 
+// 提交评论
+router.post('/api/submitComment', function *(next) {
+    console.log('提交评论')
+    
+    this.body = {
+        errno: 0,
+        msg: 'ok'
+    }
+})
+
 app.use(router.routes())
    .use(router.allowedMethods());
 
